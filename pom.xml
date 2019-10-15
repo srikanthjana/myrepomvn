@@ -30,53 +30,30 @@
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-     <plugin>
-
-      <groupId>org.jacoco</groupId>
-
-      <artifactId>jacoco-maven-plugin</artifactId>
-
-      <version>0.8.0</version>
-
-      <configuration>
-
-         <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
-
-         <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
-
-      </configuration>
-
-      <executions>
-
-       <execution>
-
-         <id>jacoco-initialize</id>
-
-         <goals>
-
-          <goal>prepare-agent</goal>
-
-         </goals>
-
-      </execution>
-
-      <execution>
-
-        <id>jacoco-site</id>
-
-        <phase>package</phase>
-
-        <goals>
-
-          <goal>report</goal>
-
-         </goals>
-
-       </execution>
-
-     </executions>
-
-   </plugin>
+    <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.5.10.201208310627</version>
+        <configuration>
+            <output>file</output>
+            <append>true</append>
+        </configuration>
+        <executions>
+            <execution>
+                <id>jacoco-initialize</id>
+                <goals>
+                    <goal>prepare-agent</goal>
+                </goals>
+            </execution>
+            <execution>
+                <id>jacoco-site</id>
+                <phase>verify</phase>
+                <goals>
+                    <goal>report</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>  
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
