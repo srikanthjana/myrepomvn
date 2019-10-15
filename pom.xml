@@ -20,11 +20,11 @@
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
-<dependency>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.4</version>
-</dependency>
+     <dependency>
+       <groupId>org.jacoco</groupId>
+       <artifactId>jacoco-maven-plugin</artifactId>
+       <version>0.8.4</version>
+     </dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -36,12 +36,12 @@
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-<plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.4</version>
-    <executions>
+     <plugins>
+      <plugin>
+         <groupId>org.jacoco</groupId>
+         <artifactId>jacoco-maven-plugin</artifactId>
+         <version>0.8.4</version>
+        <executions>
         <!--
             Prepares the property pointing to the JaCoCo runtime agent which
             is passed as VM argument when Maven the Surefire plugin is executed.
